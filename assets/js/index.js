@@ -27,3 +27,4 @@ function fetchTrips(){
     .then(tripsData=>tripsData.forEach(data=>displayTrips(data)))
     
 }
+console.log(document.getElementsByClassName('.btn'))
