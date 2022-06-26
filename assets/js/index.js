@@ -8,6 +8,15 @@ function displayTrips(trip){
     const list=document.createElement("li")
     
 
+    list.innerHTML=`
+    <img src="${trip.image}" alt="">
+    <h2>${trip.title}</h2>
+    <h3>${trip.venue}</h3>
+    <h4>${trip.date}</h4>
+    <p>${trip.description}</p>
+    
+    `
+
 //fetch from json
 function fetchTrips(){
     fetch("http://localhost:3000/trips")
