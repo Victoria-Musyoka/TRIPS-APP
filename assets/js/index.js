@@ -16,6 +16,9 @@ function displayTrips(trip){
     <p>${trip.description}</p>
     
     `
+    container.appendChild(list)   
+
+}
 
 //fetch from json
 function fetchTrips(){
