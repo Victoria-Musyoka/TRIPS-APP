@@ -1,0 +1,28 @@
+{
+    "trips":[
+        {
+           "id":1,
+           "image":"https://dynl.mktgcdn.com/p/PdKIFm42x4ilTlmQqIo-hn9SeaU0eEOojHALpH1XPwc/540x450.jpg",
+           "title":"TRIP",
+           "venue":"Maldives",
+           "date":"10/06/23",
+           "description":" See the tourist attraction sites"
+        },
+        {
+            "id":2,
+            "image":"https://i0.wp.com/www.scrapbookjourneys.com/wp-content/uploads/2018/08/8-Copy.jpg?fit=640%2C480&ssl=1",
+           "title":"TRIP",
+           "venue":"Mt Everest",
+           "date":"12/06/23",
+           "description":" Visit lake Naivasha" 
+        },
+        {
+            "id":3,
+            "image":"https://media.gettyimages.com/photos/eiffel-tower-in-paris-france-picture-id924894324?s=612x612",
+           "title":"TRIP",
+            "venue":"Paris",
+            "date":"14/06/23",
+            "description":" Visit fort Jesus and gedi ruins"
+        }
+    ]
+}
