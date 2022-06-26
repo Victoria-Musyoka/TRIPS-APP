@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     
 })
 
+function displayTrips(trip){
+    const container=document.getElementById("trips-list")
+    const list=document.createElement("li")
+    
 
 //fetch from json
 function fetchTrips(){
