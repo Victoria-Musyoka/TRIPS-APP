@@ -13,3 +13,9 @@ header{
     background-color: green;
     
 }
+.paragraph p{
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    
+ }
