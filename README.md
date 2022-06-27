@@ -3,6 +3,7 @@
 This project is a trip Application.Where a user is able to give reviews about the locations and  submitting which will be stored in db.json.Also, they can choose the destination they want to visit . 
 
 ## ScreenShot
+![Screenshot from 2022-06-27 08-33-22](https://user-images.githubusercontent.com/106319114/175866791-7c01ae5b-4fd9-4e5a-8c1b-fa678e0cf651.png)
 
 ## Technologies Used
 
@@ -21,7 +22,7 @@ This project is a trip Application.Where a user is able to give reviews about th
 
 ## Live Link
 
--[Click this link to view the live application]  ()
+-[Click this link to view the live application]  (https://victoria-musyoka.github.io/TRIPS-APP/)
 ## LICENSE
 
 MIT License
