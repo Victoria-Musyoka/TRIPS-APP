@@ -6,7 +6,7 @@
       "title": "TRIP",
       "venue": "Maldives",
       "date": "10/06/23",
-      "description": " See the tourist attraction sites"
+      "description": " You can go snorkelling, fun tubing , parasailing, water skiing"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "title": "TRIP",
       "venue": "Mt Everest",
       "date": "12/06/23",
-      "description": " Visit lake Naivasha"
+      "description": " Go trekking as a family and experience new challenges in hiking."
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "title": "TRIP",
       "venue": "Paris",
       "date": "14/06/23",
-      "description": " Visit fort Jesus and gedi ruins"
+      "description": "Visit Eiffel Tower "
     }
   ],
   "review": [
@@ -53,6 +53,10 @@
     {
       "description": "complete",
       "id": 7
+    },
+    {
+      "description": "fantastic",
+      "id": 8
     }
   ]
 }
