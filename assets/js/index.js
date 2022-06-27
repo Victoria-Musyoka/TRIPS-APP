@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded",()=>{
     fetchTrips();
+    fetchReviews();
     
 })
 
@@ -28,3 +29,48 @@ function fetchTrips(){
     
 }
 console.log(document.getElementsByClassName('.btn'))
+
+const data={}
+const form = document.querySelector(".form").addEventListener("submit",(e)=>{
+    e.preventDefault()
+   const inputElement = document.querySelector("#description").value
+
+//    console.log(e.target.inputElement)
+data.description=inputElement
+
+
+   fetch("http://localhost:3000/review",{
+   method: "POST",
+   headers:{
+    "content-Type":"application/json",
+    accept:"application/json"
+   },
+   body:JSON.stringify(data)
+   })
+   .then(resp=>resp.json())
+   .then(tripsData=>console.log(tripsData))
+
+   
+}
+
+)
+function displayReviews(review){
+    const listReview= document.querySelector("#list")
+    const li=document.createElement("li")
+    li.innerHTML=`
+    <h2>${review.description}</h2>
+ 
+    `
+    listReview.appendChild(li)
+    
+    // console.log(li)
+ }
+
+
+
+function fetchReviews(){
+    fetch("http://localhost:3000/review")
+    .then(resp=>resp.json())
+    .then(reviewData=>reviewData.forEach(review=>displayReviews(review)))
+}
+
