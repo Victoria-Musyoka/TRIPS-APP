@@ -3,60 +3,58 @@
     {
       "id": 1,
       "image": "https://dynl.mktgcdn.com/p/PdKIFm42x4ilTlmQqIo-hn9SeaU0eEOojHALpH1XPwc/540x450.jpg",
-      "title": "TRIP",
-      "venue": "Maldives",
+      "trip": "TRIP",
+      "venue": "MALDIVES",
       "date": "10/06/23",
-      "description": " You can go snorkelling, fun tubing , parasailing, water skiing"
+      "description": " You can go snorkelling, fun tubing , parasailing, water skiing",
+      "likes": 3
     },
     {
       "id": 2,
       "image": "https://i0.wp.com/www.scrapbookjourneys.com/wp-content/uploads/2018/08/8-Copy.jpg?fit=640%2C480&ssl=1",
-      "title": "TRIP",
-      "venue": "Mt Everest",
+      "trip": "TRIP",
+      "venue": "MT EVEREST",
       "date": "12/06/23",
-      "description": " Go trekking as a family and experience new challenges in hiking."
+      "description": " Go trekking as a family and experience new challenges in hiking.",
+      "likes": 1
     },
     {
       "id": 3,
       "image": "https://media.gettyimages.com/photos/eiffel-tower-in-paris-france-picture-id924894324?s=612x612",
-      "title": "TRIP",
-      "venue": "Paris",
+      "trip": "TRIP",
+      "venue": "PARIS",
       "date": "14/06/23",
-      "description": "Visit Eiffel Tower "
-    }
-  ],
-  "review": [
-    {
-      "id": 1,
-      "description": "dwefweg"
+      "description": "Visit Eiffel Tower ",
+      "likes": 2
     },
     {
-      "id": 2,
-      "description": "dwefweg"
-    },
-    {
-      "description": "good",
-      "id": 3
-    },
-    {
-      "description": "good",
+      "trip": "",
+      "likes": 0,
       "id": 4
     },
     {
-      "description": "perfect",
+      "trip": "",
+      "likes": 0,
       "id": 5
+    }
+    
+  ],
+  "review": [
+    {
+      "description": "good",
+      "id": 1
+    },
+    {
+      "description": "perfect",
+      "id": 2
     },
     {
       "description": "trial",
-      "id": 6
+      "id": 3
     },
     {
-      "description": "complete",
-      "id": 7
-    },
-    {
-      "description": "fantastic",
-      "id": 8
+      "description": "better",
+      "id": 4
     }
   ]
 }

@@ -10,41 +10,74 @@
 <body>
     <header id="heading">
         <h1>Trip Application</h1>
-        
+        <nav class="links">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact me</li>
+            </ul>
+    
+        </nav>
+       
     </header>
     <header>
         <p>The page that allows you to visit your dreams.</p>
         </header>
-        <p style="text-align:center">
-            You need a vacation!
-            </p>
+       
 
-           
-            
-      <div>
+     <div class="container">
+        <form class="add-trip-form">
+            <h3>choose a trip!</h3>
         
-        
-        <ul id="trips-list" class="cards">
-           
-
-        </ul>
-        
-    </div>
+              <input
+                type="text"
+                 name="name"
+                placeholder="Enter a trips name..."
+                class="input-text"
+              />
+               <br />
+              <input
+                type="text"
+                name=""
+                placeholder="Enter a trips image URL..."
+                class="input-text"
+              />
+              <br />
+              <input
+                type="submit"
+                name="submit"
+                value="Choose trip"
+                class="submit"
+             />
+        </form>
+    </div>      
+    <p style="text-align:center">
+       You need a vacation!<button id="new-trip-btn">Choose new trip!</button>
+     </p>   
+      <div id="trips-list"></div>
     <div>
-        <h2>USER REVIEWS</h2>
-
-    <form class="form">
         
+   
+    <form class="form">
+    <header>
+        <h2>USER REVIEWS</h2>
+    </header>
         <textarea id="description" id="" cols="20" rows="5"></textarea><br>
         <button type="submit" id="" cols="10" rows="5">SUBMIT</button>
+       
+
     </form>
     
-        <ul id="list">
-        
-        </ul>
-
+       
 
     </div>
+    <ul id="list">
+        
+    </ul>
+
+    
+    
+
 
     <script src="./assets/js/index.js"></script>
 </body>

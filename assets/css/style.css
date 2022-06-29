@@ -1,46 +1,80 @@
 *{
-    padding:10;
+    padding:0;
     margin: 15;
     box-sizing: border-box;
 }
 body{
     background: blue;
+    font-family:monospace;
 }
 header{
     display:flex;
     justify-content:space-around;
     align-items: center; 
     background-color: green;
+    font-size:1.3rem;
+    
     
 }
-.paragraph p{
+.links ul{
     display: flex;
-    justify-content: space-around;
-    align-items: left;
-    
- }
- .form{
-    
-    width: 50%;
+    justify-content: center;
 }
-
-
-.form{
-    border-radius: 50px;
-}
-
-.ul li{
-
+.links ul li{
+    border: 1px solid red;
     margin: 1rem;
-    padding: 1rem;
+    padding: 0rem;
     list-style: none;
     color: white;
     font-size: 1.5rem;
 }
+.links ul li:hover{
+    background-color: brown;
+}
 
-.container{
+
+
+list{
+    text-align: center;
+    border: grey solid 1px;
+    padding: 1rem;
+    width: 15rem;
+    height: 25rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #e04b52
+}
+button:hover {
+    background-color: whitesmoke;
+    border: #e04b52 solid 1px;
+    color: #e04b52;
+  }
+
+form{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
+    font-weight: 40;
+    border-radius: 20;
     
+}
+h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+   justify-content: center; 
+    align-items: center; 
+    font-weight: bold;
+    
+}
+.Social i {
+    color: white;
+    margin: 1rem;
+}
+#likeBtn{
+    padding: 1.2%;
+    margin: 10;
 }

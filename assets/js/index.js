@@ -1,34 +1,115 @@
+let addTrip = false;
+
 document.addEventListener("DOMContentLoaded",()=>{
     fetchTrips();
     fetchReviews();
     
-})
+    const addBtn=document.querySelector("#new-trip-btn");
+    const container=document.getElementById("trips-list");
+    const list=document.createElement("li");
+    addBtn.addEventListener("click",()=>{
+    //hie and seek
+    addTrip=!addTrip;
+    if(addTrip){
+        tripFormContainer.style.display = "block";
+    }else {
+        tripFormContainer.style.display="none";
+    }
+    });
+    getTripData()
 
-function displayTrips(trip){
-    const container=document.getElementById("trips-list")
-    const list=document.createElement("li")
+    document.querySelector(".add-trip-form").addEventListener("submit",handleSubmit)
     
+});
 
+//handle events
+function handleSubmit(e){
+    e.preventDefault()
+    let newTrip={
+        "trip":e.target.name.value,
+        "imageUrl":e.target.image,
+        "likes":0
+    }
+    renderTrip(newTrip)
+    addTripData(newTrip)
+}
+
+//render each trip
+function renderTrip(trip){
+    let list = document.createElement('div');
+    list.className = 'list';
     list.innerHTML=`
     <img src="${trip.image}" alt="">
     <h2>${trip.title}</h2>
     <h3>${trip.venue}</h3>
     <h4>${trip.date}</h4>
     <p>${trip.description}</p>
+    <p id="likesP">${trip.likes}likes</p>
+    <button id="likeBtn">like</button>
     
     `
-    container.appendChild(list)   
+    // container.appendChild(list)   
+    list.querySelector("#likeBtn").addEventListener('click',(event)=>{
+      event.preventDefault()
+      trip.likes +=1;
+      list.querySelector("#likesP").textContent=trip.likes +""+"likes"
+      updateLikes(trip)
+    })
 
+  document.querySelector('#trips-list').appendChild(list)
 }
 
 //fetch from json
-function fetchTrips(){
+
+// console.log(document.getElementsByClassName('.btn'))
+
+
+function getTripData(){
+    fetch("http://localhost:3000/trips")
+    .then(res=>res.json())
+    .then(tripData=>tripData.forEach(trip=>renderTrip(trip)))
+}
+//POST
+function addTripData(newtrip){
+    fetch("http://localhost:3000/trips", {
+      method: 'POST',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body:JSON.stringify(newtrip)
+    })
+    .then(res => res.json())
+    .then(trip=> console.log(trip))
+  
+  }
+  
+  // //patch
+  function updateLikes(trip){
+    
+  
+    fetch(`http://localhost:3000/trips/${trip.id}`, {
+      method:'PATCH',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify(trip)
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+  }
+
+
+
+
+
+  function fetchTrips(){
     fetch("http://localhost:3000/trips")
     .then(resp=>resp.json())
-    .then(tripsData=>tripsData.forEach(data=>displayTrips(data)))
+    .then(tripData=>tripData.forEach(trip=>displayTrips(trip)))
     
 }
-console.log(document.getElementsByClassName('.btn'))
+
+
 
 const data={}
 const form = document.querySelector(".form").addEventListener("submit",(e)=>{
