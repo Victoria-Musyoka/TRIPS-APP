@@ -65,13 +65,13 @@ function renderTrip(trip){
 
 
 function getTripData(){
-    fetch("http://localhost:3000/trips")
+    fetch("https://guarded-mountain-04064.herokuapp.com/trips")
     .then(res=>res.json())
     .then(tripData=>tripData.forEach(trip=>renderTrip(trip)))
 }
 //POST
 function addTripData(newtrip){
-    fetch("http://localhost:3000/trips", {
+    fetch("https://guarded-mountain-04064.herokuapp.com/trips", {
       method: 'POST',
       headers:{
         'Content-Type': 'application/json'
@@ -86,8 +86,8 @@ function addTripData(newtrip){
   // //patch
   function updateLikes(trip){
     
-  
-    fetch(`http://localhost:3000/trips/${trip.id}`, {
+  ps
+    fetch(`https://guarded-mountain-04064.herokuapp.com/trips/${trip.id}`, {
       method:'PATCH',
       headers:{
         'Content-Type':'application/json'
@@ -103,7 +103,7 @@ function addTripData(newtrip){
 
 
   function fetchTrips(){
-    fetch("http://localhost:3000/trips")
+    fetch("https://guarded-mountain-04064.herokuapp.com/trips")
     .then(resp=>resp.json())
     .then(tripData=>tripData.forEach(trip=>displayTrips(trip)))
     
@@ -120,7 +120,7 @@ const form = document.querySelector(".form").addEventListener("submit",(e)=>{
 data.description=inputElement
 
 
-   fetch("http://localhost:3000/review",{
+   fetch("https://guarded-mountain-04064.herokuapp.com/review",{
    method: "POST",
    headers:{
     "content-Type":"application/json",
@@ -150,7 +150,7 @@ function displayReviews(review){
 
 
 function fetchReviews(){
-    fetch("http://localhost:3000/review")
+    fetch("https://guarded-mountain-04064.herokuapp.com/review")
     .then(resp=>resp.json())
     .then(reviewData=>reviewData.forEach(review=>displayReviews(review)))
 }
