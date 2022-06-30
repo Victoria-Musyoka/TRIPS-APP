@@ -40,19 +40,20 @@ function renderTrip(trip){
     list.className = 'list';
     list.innerHTML=`
     <img src="${trip.image}" alt="">
-    <h2>${trip.title}</h2>
+    <h2>${trip.trip}</h2>
     <h3>${trip.venue}</h3>
     <h4>${trip.date}</h4>
-    <p>${trip.description}</p>
     <p id="likesP">${trip.likes}likes</p>
+    <p>${trip.description}</p>
+    
     <button id="likeBtn">like</button>
     
     `
     // container.appendChild(list)   
-    list.querySelector("#likeBtn").addEventListener('click',(event)=>{
-      event.preventDefault()
+    list.querySelector("#likeBtn").addEventListener('click',()=>{
+      
       trip.likes +=1;
-      list.querySelector("#likesP").textContent=trip.likes +""+"likes"
+    list.querySelector("#likesP").textContent=trip.likes +""+"likes"
       updateLikes(trip)
     })
 
@@ -86,7 +87,7 @@ function addTripData(newtrip){
   // //patch
   function updateLikes(trip){
     
-  ps
+  
     fetch(`https://guarded-mountain-04064.herokuapp.com/trips/${trip.id}`, {
       method:'PATCH',
       headers:{
@@ -105,7 +106,7 @@ function addTripData(newtrip){
   function fetchTrips(){
     fetch("https://guarded-mountain-04064.herokuapp.com/trips")
     .then(resp=>resp.json())
-    .then(tripData=>tripData.forEach(trip=>displayTrips(trip)))
+    .then(tripData=>tripData.forEach(trip=>displayTrip(trip)))
     
 }
 
