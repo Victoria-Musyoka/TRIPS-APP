@@ -7,7 +7,7 @@
       "venue": "MALDIVES",
       "date": "10/06/23",
       "description": " You can go snorkelling, fun tubing , parasailing, water skiing",
-      "likes": 3
+      "likes": 5
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "venue": "MT EVEREST",
       "date": "12/06/23",
       "description": " Go trekking as a family and experience new challenges in hiking.",
-      "likes": 1
+      "likes": 5
     },
     {
       "id": 3,
@@ -25,19 +25,12 @@
       "venue": "PARIS",
       "date": "14/06/23",
       "description": "Visit Eiffel Tower ",
-      "likes": 2
+      "likes": 5
     },
     {
-      "trip": "",
       "likes": 0,
       "id": 4
-    },
-    {
-      "trip": "",
-      "likes": 0,
-      "id": 5
     }
-    
   ],
   "review": [
     {

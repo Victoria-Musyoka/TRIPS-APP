@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 function handleSubmit(e){
     e.preventDefault()
     let newTrip={
-        "trip":e.target.name.value,
-        "imageUrl":e.target.image,
+        // "trip":e.target.name.value,
+        // "imageUrl":e.target.image,
         "likes":0
     }
     renderTrip(newTrip)
